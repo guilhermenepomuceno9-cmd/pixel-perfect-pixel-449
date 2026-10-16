@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 
 function Cta({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <a href={CHECKOUT_URL} className={`btn-cta ${className}`}>
+    <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={`btn-cta ${className}`}>
       {children} <span aria-hidden>→</span>
     </a>
   );
@@ -373,7 +373,7 @@ function Index() {
 
       {/* CTA FIXO MOBILE */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t bg-background/90 p-3 backdrop-blur md:hidden">
-        <a href="#oferta" className="btn-cta w-full py-4 text-sm">QUERO ACESSAR — R$47</a>
+        <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="btn-cta w-full py-4 text-sm">QUERO ACESSAR — R$47</a>
       </div>
     </div>
   );
